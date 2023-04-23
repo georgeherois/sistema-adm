@@ -23,4 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Agenda funções
 Route::get('/agenda', [App\Http\Controllers\AgendaController::class, 'index'])->name('agenda');
-Route::post('/agenda/salvar',[App\Http\Controllers\AgendaController::class,'agendaSalvar'])->name('salvar.agenda');
+Route::post('/agenda/salvar',[App\Http\Controllers\AgendaController::class,'Salvar'])->name('salvar.agenda');
+
+Route::get('/agenda/edit/{id}',[App\Http\Controllers\AgendaController::class,'agendaEdit']);
+Route::post('/agenda/update/{id}',[App\Http\Controllers\AgendaController::class,'agendaUpdate']);

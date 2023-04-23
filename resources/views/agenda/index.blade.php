@@ -33,6 +33,8 @@
                 <th>Data</th>
                 <th>Hora</th>
                 <th>contato</th>
+                <th>editar</th>
+                <th>apagar</th>
             </tr>
         </thead>
         <tbody>
@@ -43,6 +45,11 @@
                     <td>{{ date('d/m/Y', strtotime($evento->data)) }}</td>
                     <td>{{ date('H:i', strtotime($evento->data)) }}</td>
                     <td>{{ $nome_cliente = $evento->cliente->telefone; }}</td>
+                    <td>
+                        <a href="{{ url('agenda/edit/'.$evento->id)}}" class="btn btn-info"> editar</a>
+                        <a href="{{ url('agenda/delete/'.$evento->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
+
+                    </td>
                 </tr>
             @endforeach
         </tbody>

@@ -28,7 +28,7 @@ class AgendaController extends Controller
         return view('agenda.create');
     }
 
-    public function agendaSalvar(Request $request)
+    public function Salvar(Request $request)
     {
         //dd($request);
 
@@ -42,14 +42,15 @@ class AgendaController extends Controller
         return redirect('/agenda');
     }
 
-    public function edit($id)
+    public function agendaedit($id)
     {
-        $evento = Agenda::find($id);
+        $evento = Agenda::with('cliente')->find($id);
+        $clientes = Cliente::all();
 
-        return view('agenda.edit', ['evento' => $evento]);
+        return view('agenda.edit', ['evento' => $evento], ['clientes' => $clientes]);
     }
 
-    public function update(Request $request, $id)
+    public function agendaUpdate(Request $request, $id)
     {
         $agenda = Agenda::find($id);
 
