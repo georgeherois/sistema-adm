@@ -10,7 +10,21 @@
 
 @section('content')
 
- <h1>Agenda</h1>
+<form method="POST" action="{{ route('salvar.agenda') }}">
+    @csrf
+<input type="datetime-local" name="data_hora"  required>
+
+<select name="user_id">
+    @foreach ($clientes as $cliente)
+        <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
+    @endforeach
+</select>
+
+<button type="submit" class="btn btn-primary">Salvar</button>
+
+</form>
+
+
 
     <table>
         <thead>

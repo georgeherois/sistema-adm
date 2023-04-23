@@ -21,4 +21,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Agenda funções
 Route::get('/agenda', [App\Http\Controllers\AgendaController::class, 'index'])->name('agenda');
+Route::post('/agenda/salvar',[App\Http\Controllers\AgendaController::class,'agendaSalvar'])->name('salvar.agenda');
