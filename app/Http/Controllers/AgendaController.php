@@ -54,15 +54,12 @@ class AgendaController extends Controller
     {
         $agenda = Agenda::find($id);
 
-        $agenda->titulo = $request->titulo;
-        $agenda->data = $request->data;
-        $agenda->hora = $request->hora;
-        $agenda->localizacao = $request->localizacao;
-        $agenda->descricao = $request->descricao;
-
+        $agenda->cliente_id = $request->user_id;
+        $agenda->data = $request->data_hora;
+               
         $agenda->save();
 
-        return redirect('/agenda/' . $id);
+        return redirect('/agenda');
     }
 
     public function destroy($id)

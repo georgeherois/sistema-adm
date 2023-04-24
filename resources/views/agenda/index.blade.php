@@ -10,6 +10,8 @@
 
 @section('content')
 
+<h1>Novo agendamento</h1>
+
 <form method="POST" action="{{ route('salvar.agenda') }}">
     @csrf
 <input type="datetime-local" name="data_hora"  required>

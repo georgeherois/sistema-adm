@@ -13,7 +13,7 @@
     <div class="card card-default">
 
         <div class="card-body">
-        <form action="{{ url('sobre/update/'.$evento->id) }}" method="POST"> 
+        <form action="{{ url('agenda/update/'.$evento->id) }}" method="POST"> 
             @csrf
                 <div class="form-group">
                  
