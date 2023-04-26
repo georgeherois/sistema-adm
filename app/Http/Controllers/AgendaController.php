@@ -62,7 +62,7 @@ class AgendaController extends Controller
         return redirect('/agenda');
     }
 
-    public function destroy($id)
+    public function agendaDelete($id)
     {
         $agenda = Agenda::find($id);
 

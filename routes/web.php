@@ -27,3 +27,7 @@ Route::post('/agenda/salvar',[App\Http\Controllers\AgendaController::class,'Salv
 
 Route::get('/agenda/edit/{id}',[App\Http\Controllers\AgendaController::class,'agendaEdit']);
 Route::post('/agenda/update/{id}',[App\Http\Controllers\AgendaController::class,'agendaUpdate']);
+Route::get('/agenda/delete/{id}',[App\Http\Controllers\AgendaController::class,'agendaDelete']);
+
+//Cliente funções
+Route::get('/cliente', [App\Http\Controllers\ClientesController::class, 'index'])->name('cliente');
