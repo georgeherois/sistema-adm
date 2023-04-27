@@ -5,12 +5,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Agenda</h1>
+    <h1>Clientes</h1>
 @stop
 
 @section('content')
 
-<h1>Novo agendamento</h1>
+<h1>Cadastrar Cliente</h1>
 
 <!--
 <form method="POST" action="{{ route('salvar.agenda') }}">
