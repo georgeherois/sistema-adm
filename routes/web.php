@@ -31,3 +31,4 @@ Route::get('/agenda/delete/{id}',[App\Http\Controllers\AgendaController::class,'
 
 //Cliente funções
 Route::get('/cliente', [App\Http\Controllers\ClientesController::class, 'index'])->name('cliente');
+Route::get('/cliente/cadastro', [App\Http\Controllers\ClientesController::class, 'cadastro'])->name('cadastro');

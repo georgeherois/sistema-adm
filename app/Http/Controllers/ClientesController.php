@@ -18,11 +18,11 @@ class ClientesController extends Controller
         return view('cliente.index',['clientes' => $clientes] );
     }
 
-    public function show($id)
+    public function cadastro()
     {
-        $evento = Cliente::find($id);
+        //$evento = Cliente::find($id);
 
-        return view('cliente.show', ['evento' => $evento]);
+        return view('cliente.cadastro');
     }
     
     public function Salvar(Request $request)
