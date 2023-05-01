@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/calendario', [App\Http\Controllers\HomeController::class, 'calendario'])->name('home');
 
 //Agenda funções
 Route::get('/agenda', [App\Http\Controllers\AgendaController::class, 'index'])->name('agenda');

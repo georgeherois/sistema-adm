@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('agenda.calendario');
     }
+
+   /* public function calendario(){
+       return view('agenda.calendario');
+    }*/
 }
