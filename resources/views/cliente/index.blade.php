@@ -12,21 +12,8 @@
 
 <h1>Cadastrar Cliente</h1>
 
-<!--
-<form method="POST" action="{{ route('salvar.agenda') }}">
-    @csrf
-<input type="datetime-local" name="data_hora"  required>
+<a href="{{ url('cliente/cadastro/')}}" class="btn btn-info"> Cadastar CLiente </a>
 
-<select name="user_id">
-    @foreach ($clientes as $cliente)
-        <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
-    @endforeach
-</select>
-
-<button type="submit" class="btn btn-primary">Salvar</button>
-
-</form>
--->
 
 
     <table>
@@ -34,6 +21,7 @@
             <tr>
                 <th>ID</th>
                 <th>nome</th>
+                <th>CPF</th>
                 <th>e-mail</th>
                 <th>telefone</th>
                 <th>endereco</th>
@@ -47,6 +35,7 @@
                     
                     <td>{{ $cliente->id }}</td>
                     <td>{{ $cliente->nome }}</td>
+                    <td>{{ $cliente->cpf }}</td>
                     <td>{{ $cliente->email }}</td>
                     <td>{{ $cliente->telefone }}</td>
                     <td>{{ $cliente->endereco }}</td>
@@ -54,8 +43,8 @@
                     <td>{{ $cliente->cep }}</td>
                     
                     <td>
-                        <a href="{{ url('agenda/edit/'.$cliente->id)}}" class="btn btn-info"> editar</a>
-                        <a href="{{ url('agenda/delete/'.$cliente->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
+                        <a href="{{ url('cliente/edit/'.$cliente->id)}}" class="btn btn-info"> editar</a>
+                        <a href="{{ url('cliente/delete/'.$cliente->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
 
                     </td>
                 </tr>
