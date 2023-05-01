@@ -25,44 +25,55 @@ class ClientesController extends Controller
         return view('cliente.cadastro');
     }
     
-    public function Salvar(Request $request)
+    public function salvar(Request $request)
     {
         //dd($request);
 
-        $agenda = new Cliente;
+        $cliente = new Cliente;
 
-        $agenda->cliente_id = $request->user_id;
-        $agenda->data = $request->data_hora;
-               
-        $agenda->save();
+        $cliente-> nome = $request->nome;
+        $cliente-> email = $request->email;
+        $cliente-> telefone = $request->telefone;
+        $cliente-> endereco = $request->endereco;
+        $cliente-> complemento = $request->complemento;
+        $cliente-> cep = $request->cep;
 
-        return redirect('/cliente');
-    }
-
-    public function agendaedit($id)
-    {
-                $clientes = Cliente::all();
-
-        return view('agenda.edit', ['clientes' => $clientes]);
-    }
-
-    public function agendaUpdate(Request $request, $id)
-    {
-        $agenda = Cliente::find($id);
-
-        $agenda->cliente_id = $request->user_id;
-        $agenda->data = $request->data_hora;
-               
-        $agenda->save();
+        $cliente->save();
 
         return redirect('/cliente');
     }
 
-    public function agendaDelete($id)
+    public function clienteEdit($id)
     {
-        $agenda = Cliente::find($id);
+        $cliente = Cliente::find($id);
+        
+        //dd($cliente);
 
-        $agenda->delete();
+        return view('cliente.edit', ['cliente' => $cliente]);
+    }
+
+    public function clienteUpdate(Request $request, $id)
+    {
+        $cliente = Cliente::find($id);
+
+        $cliente-> nome = $request->nome;
+        $cliente-> email = $request->email;
+        $cliente-> telefone = $request->telefone;
+        $cliente-> endereco = $request->endereco;
+        $cliente-> complemento = $request->complemento;
+        $cliente-> cep = $request->cep;
+
+               
+        $cliente->save();
+
+        return redirect('/cliente');
+    }
+
+    public function clienteDelete($id)
+    {
+        $cliente = Cliente::find($id);
+
+        $cliente->delete();
 
         return redirect('/cliente');
     }

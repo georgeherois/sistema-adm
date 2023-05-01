@@ -41,8 +41,8 @@
                     <td>{{ $cliente->cep }}</td>
                     
                     <td>
-                        <a href="{{ url('agenda/edit/'.$cliente->id)}}" class="btn btn-info"> editar</a>
-                        <a href="{{ url('agenda/delete/'.$cliente->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
+                        <a href="{{ url('cliente/edit/'.$cliente->id)}}" class="btn btn-info"> editar</a>
+                        <a href="{{ url('cliente/delete/'.$cliente->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
 
                     </td>
                 </tr>

@@ -1,19 +1,15 @@
 
-
 @extends('adminlte::page', ['iFrameEnabled' => false])
 
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Clientes</h1>
+    <h1>Editar Cliente</h1>
 @stop
 
 @section('content')
 
-<h1>Cadastrar Cliente</h1>
-
-
-<form method="POST" action="{{ route('salvar.cliente') }}">
+<form method="POST" action="{{ url('cliente/update/'.$cliente->id) }}">
     @csrf
 
     <div class="card card-danger">
@@ -28,7 +24,7 @@
         <div class="input-group-prepend">
         <span class="input-group-text"><i class="fa fa-user-alt"></i></span>
         </div>
-        <input type="text" name="nome" class="form-control"  placeholder="Nome Completo">
+        <input type="text" name="nome" class="form-control"  value="{{ $cliente->nome }}">
         </div>
         
         </div>
@@ -40,7 +36,7 @@
         <div class="input-group-prepend">
         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
         </div>
-        <input type="email" name="email" class="form-control"   placeholder="exemplo@email.com">
+        <input type="email" name="email" class="form-control"   value="{{ $cliente->email }}">
         </div>
         
         </div>
@@ -55,7 +51,7 @@
         <input type="tel" name="telefone" class="form-control"
         
         data-mask="" inputmode="text"
-        placeholder="(99) 99999-9999">
+        value="{{ $cliente->telefone }}">
         </div>
         
         </div>
@@ -67,7 +63,7 @@
         <div class="input-group-prepend">
         <span class="input-group-text"><i class="fas fa-address-card"></i></span>
         </div>
-        <input type="text" name="endereco" class="form-control" data-inputmask="'alias': 'ip'" data-mask="" inputmode="decimal">
+        <input type="text" name="endereco" class="form-control" value="{{ $cliente->endereco }}">
         </div>
         
         </div>
@@ -78,7 +74,7 @@
         <div class="input-group-prepend">
         <span class="input-group-text"><i class="fas fa-address-book"></i></span>
         </div>
-        <input type="text" name="complemento" class="form-control" data-inputmask="'alias': 'ip'" data-mask="" inputmode="decimal">
+        <input type="text" name="complemento" class="form-control" value="{{ $cliente->complemento }}">
         </div>
         
         </div>
@@ -90,7 +86,7 @@
         <div class="input-group-prepend">
         <span class="input-group-text"><i class="fas fa-address-book"></i></span>
         </div>
-        <input type="text" name="cep" class="form-control"  placeholder="99999-999">
+        <input type="text" name="cep" class="form-control"  value="{{ $cliente->cep }}">
         </div>
         
         </div>
@@ -105,7 +101,7 @@
 
 </form>
 
-    @stop
+@stop
 
     @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

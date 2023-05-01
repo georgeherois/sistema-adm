@@ -28,7 +28,7 @@ class AgendaController extends Controller
         return view('agenda.create');
     }
 
-    public function Salvar(Request $request)
+    public function salvar(Request $request)
     {
         //dd($request);
 
