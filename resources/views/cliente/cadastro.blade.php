@@ -32,6 +32,18 @@
         </div>
         
         </div>
+
+        <div class="form-group">
+        <label>CPF:</label>
+        <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-user-alt"></i></span>
+        </div>
+        <input type="text" name="cpf" class="form-control"  placeholder="000.000.000-00">
+        </div>
+        
+        </div>
+
         
         
         <div class="form-group">

@@ -32,6 +32,7 @@ class ClientesController extends Controller
         $cliente = new Cliente;
 
         $cliente-> nome = $request->nome;
+        $cliente-> nome = $request->cpf;
         $cliente-> email = $request->email;
         $cliente-> telefone = $request->telefone;
         $cliente-> endereco = $request->endereco;
@@ -57,6 +58,7 @@ class ClientesController extends Controller
         $cliente = Cliente::find($id);
 
         $cliente-> nome = $request->nome;
+        $cliente-> nome = $request->cpf;
         $cliente-> email = $request->email;
         $cliente-> telefone = $request->telefone;
         $cliente-> endereco = $request->endereco;

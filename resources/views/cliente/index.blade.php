@@ -21,6 +21,7 @@
             <tr>
                 <th>ID</th>
                 <th>nome</th>
+                <th>CPF</th>
                 <th>e-mail</th>
                 <th>telefone</th>
                 <th>endereco</th>
@@ -34,6 +35,7 @@
                     
                     <td>{{ $cliente->id }}</td>
                     <td>{{ $cliente->nome }}</td>
+                    <td>{{ $cliente->cpf }}</td>
                     <td>{{ $cliente->email }}</td>
                     <td>{{ $cliente->telefone }}</td>
                     <td>{{ $cliente->endereco }}</td>
