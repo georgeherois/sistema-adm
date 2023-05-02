@@ -325,6 +325,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Serviços',
+            'url'  => 'servicos/',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',

@@ -38,3 +38,13 @@ Route::post('/cliente/salvar',[App\Http\Controllers\ClientesController::class,'s
 Route::get('/cliente/edit/{id}',[App\Http\Controllers\ClientesController::class,'clienteEdit']);
 Route::post('/cliente/update/{id}',[App\Http\Controllers\ClientesController::class,'clienteUpdate']);
 Route::get('/cliente/delete/{id}',[App\Http\Controllers\ClientesController::class,'clienteDelete']);
+
+
+//Serviços funções
+Route::get('/servicos', [App\Http\Controllers\ServicosController::class, 'index'])->name('servico');
+Route::get('/cliente/cadastro', [App\Http\Controllers\ClientesController::class, 'cadastro'])->name('cadastro');
+Route::post('/cliente/salvar',[App\Http\Controllers\ClientesController::class,'salvar'])->name('salvar.cliente');
+
+Route::get('/cliente/edit/{id}',[App\Http\Controllers\ClientesController::class,'clienteEdit']);
+Route::post('/cliente/update/{id}',[App\Http\Controllers\ClientesController::class,'clienteUpdate']);
+Route::get('/cliente/delete/{id}',[App\Http\Controllers\ClientesController::class,'clienteDelete']);
