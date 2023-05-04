@@ -22,6 +22,12 @@
     @endforeach
 </select>
 
+<select name="servico_id">
+    @foreach ($servicos as $servico)
+        <option value="{{ $servico->id }}">{{ $servico->nome }}</option>
+    @endforeach
+</select>
+
 <button type="submit" class="btn btn-primary">Salvar</button>
 
 </form>

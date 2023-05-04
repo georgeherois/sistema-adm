@@ -5,14 +5,14 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Clientes</h1>
+    <h1>Serviços</h1>
 @stop
 
 @section('content')
 
 <h1>Cadastrar Serviços</h1>
 
-<a href="{{ url('cliente/cadastro/')}}" class="btn btn-info"> Cadastar Serviço </a>
+<a href="{{ url('servicos/cadastro/')}}" class="btn btn-info"> Cadastar Serviço </a>
 
 
 
@@ -34,8 +34,8 @@
                     <td>{{ $servico->valor }}</td>
                    
                     <td>
-                        <a href="{{ url('cliente/edit/'.$servico->id)}}" class="btn btn-info"> editar</a>
-                        <a href="{{ url('cliente/delete/'.$servico->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
+                        <a href="{{ url('servicos/edit/'.$servico->id)}}" class="btn btn-info"> editar</a>
+                        <a href="{{ url('servivcos/delete/'.$servico->id)}}" onclick="return confirm('Tem certeza que quer deletar ?')" class="btn btn-danger"> apagar</a>
 
                     </td>
                 </tr>

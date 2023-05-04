@@ -22,5 +22,9 @@ class Agenda extends Model
         return $this->belongsTo(Cliente::class);
     }
 
+    public function servico()
+    {
+        return $this->belongsTo(Servico::class);
+    }
 
 }

@@ -5,15 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Agenda;
 use App\Models\Cliente;
+use App\Models\Servico;
 
 class AgendaController extends Controller
 {
     public function index()
     {
-        $eventos = Agenda::with('cliente')->get();
+        $eventos = Agenda::with('cliente','Servico')->get();
         $clientes = Cliente::all();
+        $servicos = Servico::all();
+        
+        //dd($servicos);
 
-        return view('agenda.index', ['eventos' => $eventos], ['clientes' => $clientes] );
+       // return view('agenda.index', ['eventos' => $eventos], ['clientes' => $clientes], ['servicos' => $servicos] );
+       return view('agenda.index', [
+        'eventos' => $eventos,
+        'clientes' => $clientes,
+        'servicos' => $servicos
+    ]);
     }
 
     public function show($id)

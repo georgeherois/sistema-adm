@@ -20,26 +20,22 @@ class ServicosController extends Controller
     {
         //$evento = Cliente::find($id);
 
-        return view('cliente.cadastro');
+        return view('servicos.cadastro');
     }
     
     public function salvar(Request $request)
     {
         //dd($request);
 
-        $cliente = new Cliente;
+        $serviço = new Servico;
 
-        $cliente-> nome = $request->nome;
-        $cliente-> nome = $request->cpf;
-        $cliente-> email = $request->email;
-        $cliente-> telefone = $request->telefone;
-        $cliente-> endereco = $request->endereco;
-        $cliente-> complemento = $request->complemento;
-        $cliente-> cep = $request->cep;
+        $serviço-> nome = $request->nome;
+        $serviço-> valor = $request->valor+".00";
+        
 
-        $cliente->save();
+        $serviço->save();
 
-        return redirect('/cliente');
+        return redirect('/servicos');
     }
 
     public function clienteEdit($id)
