@@ -39,6 +39,7 @@
             <tr>
                 <th>Cliente</th>
                 <th>Data</th>
+                <th>Serviço(s)</th>
                 <th>Hora</th>
                 <th>contato</th>
                 <th>editar</th>
@@ -51,6 +52,7 @@
                     
                     <td>{{ $nome_cliente = $evento->cliente->nome; }}</td>
                     <td>{{ date('d/m/Y', strtotime($evento->data)) }}</td>
+                    <td>{{ $servico_cliente = $evento->servico->nome; }}</td>
                     <td>{{ date('H:i', strtotime($evento->data)) }}</td>
                     <td>{{ $nome_cliente = $evento->cliente->telefone; }}</td>
                     <td>
