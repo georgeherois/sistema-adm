@@ -45,6 +45,7 @@ class AgendaController extends Controller
 
         $agenda->cliente_id = $request->user_id;
         $agenda->servico_id = $request->servico_id;
+        //$agenda->servico_id->sync([$request->servico_id]);
         $agenda->data = $request->data_hora;
                
         $agenda->save();
